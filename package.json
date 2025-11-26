@@ -1,0 +1,23 @@
+{
+    "name": "masanawa-corporate",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/tailwind": "latest",
+        "@google/generative-ai": "^0.24.1",
+        "@supabase/supabase-js": "latest",
+        "astro": "latest",
+        "marked": "^17.0.1",
+        "tailwindcss": "latest"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0"
+    }
+}
