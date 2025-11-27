@@ -9,13 +9,22 @@ import { marked } from 'marked';
 const { slug } = Astro.params;
 
 
-const { data: project, error } = await supabase
-    .from('projects')
-    .select('*')
-    .eq('slug', slug)
-    .single();
+let project = null;
+let error = null;
+
+if (supabase) {
+    const result = await supabase
+        .from('projects')
+        .select('*')
+        .eq('slug', slug)
+        .single();
+    project = result.data;
+    error = result.error;
+}
 
 if (error || !project) {
+    // If supabase is missing, we might still want to show 404 or handle it differently
+    // For now, redirecting to 404 is safe if project not found
     return Astro.redirect('/404');
 }
 

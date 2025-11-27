@@ -2,10 +2,19 @@
 import KwataLayout from '../../../layouts/KwataLayout.astro';
 import { supabase } from '../../../lib/supabase';
 
-const { data: projects, error } = await supabase
-    .from('projects')
-    .select('*')
-    .order('created_at', { ascending: false });
+let projects = [];
+let error = null;
+
+if (supabase) {
+    const result = await supabase
+        .from('projects')
+        .select('*')
+        .order('created_at', { ascending: false });
+    projects = result.data;
+    error = result.error;
+} else {
+    console.warn('Supabase client missing, cannot fetch projects');
+}
 
 if (error) {
     console.error('Error fetching projects:', error);

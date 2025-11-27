@@ -7,4 +7,6 @@ if (!supabaseUrl || !supabaseKey) {
     console.warn('Missing Supabase environment variables! Check your .env file or Vercel project settings.');
 }
 
-export const supabase = createClient(supabaseUrl || '', supabaseKey || '');
+export const supabase = (supabaseUrl && supabaseKey)
+    ? createClient(supabaseUrl, supabaseKey)
+    : null;

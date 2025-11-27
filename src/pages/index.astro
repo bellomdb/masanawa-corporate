@@ -4,11 +4,21 @@ import { supabase } from '../lib/supabase';
 import { localProjects } from '../data/projects';
 
 // Fetch projects from database
-let { data: dbProjects, error } = await supabase
-    .from('projects')
-    .select('*')
-    .eq('status', 'active')
-    .order('order_index', { ascending: true });
+let dbProjects = [];
+let error = null;
+
+if (supabase) {
+    const result = await supabase
+        .from('projects')
+        .select('*')
+        .eq('status', 'active')
+        .order('order_index', { ascending: true });
+    
+    dbProjects = result.data;
+    error = result.error;
+} else {
+    console.warn('Supabase client not initialized. Skipping DB fetch.');
+}
 
 if (error) {
     console.error('Error fetching projects:', error);

@@ -8,6 +8,10 @@ export const POST: APIRoute = async ({ request }) => {
 
         let error;
 
+        if (!supabase) {
+            return new Response(JSON.stringify({ error: 'Supabase client not initialized' }), { status: 500 });
+        }
+
         if (id) {
             // Update existing
             const { error: updateError } = await supabase

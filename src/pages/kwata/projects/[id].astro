@@ -20,7 +20,7 @@ let project = {
 };
 
 
-if (!isNew && id) {
+if (!isNew && id && supabase) {
     const { data, error } = await supabase
         .from('projects')
         .select('*')
@@ -32,6 +32,8 @@ if (!isNew && id) {
     } else if (data) {
         project = data;
     }
+} else if (!supabase && !isNew) {
+     console.warn('Supabase client missing, cannot fetch project data');
 }
 
 
