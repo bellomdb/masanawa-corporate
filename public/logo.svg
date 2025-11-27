@@ -10,13 +10,13 @@
   <!-- Icon: Interwoven pattern -->
   <g transform="translate(10, 20)">
     <!-- Horizontal waves -->
-    <path d="M5 15 Q12 10, 20 15 T35 15" stroke="url(#logoGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <path d="M5 30 Q12 25, 20 30 T35 30" stroke="url(#logoGrad)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.9"/>
-    <path d="M5 45 Q12 40, 20 45 T35 45" stroke="url(#logoGrad)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M5 15 Q12 10, 20 15 T35 15" stroke="url(#logoGrad)" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M5 30 Q12 25, 20 30 T35 30" stroke="url(#logoGrad)" stroke-width="7" fill="none" stroke-linecap="round" opacity="1"/>
+    <path d="M5 45 Q12 40, 20 45 T35 45" stroke="url(#logoGrad)" stroke-width="7" fill="none" stroke-linecap="round" opacity="1"/>
     
     <!-- Vertical weave -->
-    <path d="M15 5 Q15 12, 15 20 T15 50" stroke="#F59E0B" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
-    <path d="M25 5 Q25 12, 25 20 T25 50" stroke="#F59E0B" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M15 5 Q15 12, 15 20 T15 50" stroke="#F59E0B" stroke-width="6" fill="none" stroke-linecap="round" opacity="1"/>
+    <path d="M25 5 Q25 12, 25 20 T25 50" stroke="#F59E0B" stroke-width="6" fill="none" stroke-linecap="round" opacity="1"/>
   </g>
   
   <!-- Text: MASANAWA -->
