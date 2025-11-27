@@ -1,0 +1,30 @@
+/* empty css                                    */
+import { e as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead, h as addAttribute } from '../../chunks/astro/server_CdnQXOD5.mjs';
+import 'piccolore';
+import { $ as $$KwataLayout } from '../../chunks/KwataLayout_D4Dl5ZRB.mjs';
+import { s as supabase } from '../../chunks/supabase_DdrpAs7p.mjs';
+export { renderers } from '../../renderers.mjs';
+
+const $$Index = createComponent(async ($$result, $$props, $$slots) => {
+  const { data: projects, error } = await supabase.from("projects").select("*").order("created_at", { ascending: false });
+  if (error) {
+    console.error("Error fetching projects:", error);
+  }
+  return renderTemplate`${renderComponent($$result, "KwataLayout", $$KwataLayout, { "title": "Projects" }, { "default": async ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="flex items-center justify-between mb-8"> <div> <h1 class="text-3xl font-bold text-gray-900">Projects</h1> <p class="text-gray-500 mt-1">Manage your portfolio and initiatives.</p> </div> <a href="/kwata/projects/new" class="bg-brand-purple hover:bg-brand-dark text-white px-6 py-3 rounded-xl font-bold transition-colors flex items-center gap-2 shadow-lg shadow-brand-purple/20"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+New Project
+</a> </div> <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden"> <table class="w-full text-left border-collapse"> <thead> <tr class="bg-gray-50 border-b border-gray-200"> <th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Project Name</th> <th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Status</th> <th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">URL</th> <th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider text-right">Actions</th> </tr> </thead> <tbody class="divide-y divide-gray-100"> ${projects && projects.map((project) => renderTemplate`<tr class="hover:bg-gray-50 transition-colors group"> <td class="px-6 py-4"> <div class="flex items-center gap-4"> <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold"${addAttribute(`background-color: ${project.icon_color}`, "style")}> ${project.icon_letter} </div> <div> <p class="font-bold text-gray-900">${project.name}</p> <p class="text-xs text-gray-500 truncate max-w-[200px]">${project.description}</p> </div> </div> </td> <td class="px-6 py-4"> <span${addAttribute(`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${project.status === "active" ? "bg-green-100 text-green-800" : project.status === "draft" ? "bg-yellow-100 text-yellow-800" : "bg-gray-100 text-gray-800"}`, "class")}> ${project.status || "active"} </span> </td> <td class="px-6 py-4 text-sm text-gray-500"> <a${addAttribute(project.url, "href")} target="_blank" class="hover:text-brand-purple hover:underline truncate max-w-[200px] block"> ${project.url} </a> </td> <td class="px-6 py-4 text-right"> <div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity"> <a${addAttribute(`/kwata/projects/${project.id}`, "href")} class="p-2 text-gray-400 hover:text-brand-purple hover:bg-brand-purple/10 rounded-lg transition-colors"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> </a> <button class="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg> </button> </div> </td> </tr>`)} </tbody> </table> </div> ` })}`;
+}, "C:/Users/Besta/Masanawa corporate/src/pages/kwata/projects/index.astro", void 0);
+
+const $$file = "C:/Users/Besta/Masanawa corporate/src/pages/kwata/projects/index.astro";
+const $$url = "/kwata/projects";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+    __proto__: null,
+    default: $$Index,
+    file: $$file,
+    url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

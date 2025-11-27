@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0D9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon: Interwoven pattern -->
+  <g transform="translate(10, 20)">
+    <!-- Horizontal waves -->
+    <path d="M5 15 Q12 10, 20 15 T35 15" stroke="url(#logoGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M5 30 Q12 25, 20 30 T35 30" stroke="url(#logoGrad)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <path d="M5 45 Q12 40, 20 45 T35 45" stroke="url(#logoGrad)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    
+    <!-- Vertical weave -->
+    <path d="M15 5 Q15 12, 15 20 T15 50" stroke="#F59E0B" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M25 5 Q25 12, 25 20 T25 50" stroke="#F59E0B" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+  </g>
+  
+  <!-- Text: MASANAWA -->
+  <text x="70" y="58" font-family="'Outfit', 'Inter', sans-serif" font-size="40" font-weight="800" fill="#1F2937" letter-spacing="1">
+    MASANAWA
+  </text>
+  
+  <!-- Tagline -->
+  <text x="72" y="75" font-family="'Outfit', 'Inter', sans-serif" font-size="11" font-weight="600" fill="#7C3AED" letter-spacing="2">
+    WEAVEWELL INDUSTRIES
+  </text>
+</svg>
