@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { supabase } from '../lib/supabase';
 
 // Fetch projects from database
-const { data: projects, error } = await supabase
+let { data: projects, error } = await supabase
     .from('projects')
     .select('*')
     .eq('status', 'active')
@@ -11,6 +11,28 @@ const { data: projects, error } = await supabase
 
 if (error) {
     console.error('Error fetching projects:', error);
+}
+
+// Manual overrides (since we can't write to DB due to RLS)
+if (projects) {
+    // 1. Remove "Founder Profile"
+    projects = projects.filter(p => !p.name.toLowerCase().includes('founder profile'));
+
+    // 2. Add "UNigeria"
+    const unigeria = {
+        name: 'UNigeria',
+        description: 'Empowering Citizens, Strengthening Democracy. Join the movement for a transparent and accountable Nigeria. Report issues, verify facts, and collaborate.',
+        slug: 'unigeria',
+        url: '', // Add URL if known, or leave empty
+        icon_color: '#0D9488',
+        icon_letter: 'U',
+        status: 'active'
+    };
+    
+    // Check if UNigeria is already there to avoid duplicates
+    if (!projects.find(p => p.slug === 'unigeria')) {
+        projects.unshift(unigeria); // Add to beginning
+    }
 }
 ---
 
@@ -49,11 +71,9 @@ if (error) {
                         data-description={project.description?.toLowerCase() || ''}
                     >
                         <div 
-                            class="w-20 h-20 rounded-2xl mb-6 flex items-center justify-center text-3xl font-bold shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 relative overflow-hidden"
-                            style={`background-color: ${project.icon_color}; color: white;`}
+                            class="w-20 h-20 rounded-2xl mb-6 flex items-center justify-center text-3xl font-bold shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 relative overflow-hidden bg-white p-2"
                         >
-                            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                            {project.icon_letter}
+                            <img src="/favicon.svg" alt={project.name} class="w-full h-full object-contain" />
                         </div>
                         <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-purple transition-colors mb-2">{project.name}</h3>
                         {project.description && (
