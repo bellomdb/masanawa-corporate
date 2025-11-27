@@ -16,5 +16,5 @@ Track progress, verify facts, and see real change happening in your community.
     icon_letter: 'U',
     icon_color: '#0D9488', // Teal
     order_index: 1,
-    url: 'https://unigeria.vercel.app'
+    url: 'https://un.masanawa.com'
 };
