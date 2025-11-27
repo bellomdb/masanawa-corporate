@@ -4,10 +4,7 @@ import { supabase } from '../../lib/supabase';
 import { marked } from 'marked';
 
 
-export async function getStaticPaths() {
-    const { data: projects } = await supabase.from('projects').select('slug');
-    return projects?.map(p => ({ params: { slug: p.slug } })) || [];
-}
+
 
 const { slug } = Astro.params;
 
