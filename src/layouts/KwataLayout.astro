@@ -11,6 +11,23 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title} | Kwata Admin</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        
+        <!-- Google AdSense -->
+        <meta name="google-adsense-account" content="ca-pub-8370465467224716">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8370465467224716" crossorigin="anonymous"></script>
+	</head>
+	<body class="bg-gray-50 text-gray-900 font-['Inter'] min-h-screen flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-gray-200 min-h-screen fixed left-0 top-0 z-50 flex flex-col">
+            <div class="p-6 border-b border-gray-100">
+                <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <img src="/logo.svg" alt="Masanawa" class="h-8" />
                     <span class="font-display font-bold text-gray-900 text-sm tracking-wide">KWATA</span>
                 </a>
             </div>
