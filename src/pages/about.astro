@@ -7,42 +7,80 @@ const companyInfo = {
     registeredIn: "Nigeria",
     companyType: "Private Company Limited By Shares",
     objectives: [
+        "Build AI-powered platforms that democratize access to information, education, and essential services across Africa",
         "Develop civic technology that empowers citizens and strengthens democratic institutions",
-        "Provide secure, data-driven platforms for human rights documentation and advocacy",
-        "Foster digital literacy and community resilience through innovative e-learning"
+        "Create culturally-relevant digital solutions that bridge language barriers and preserve African heritage",
+        "Foster innovation through practical AI tools that solve everyday challenges for Nigerian communities"
     ],
-    vision: "To be the leading force in African civic technology, where digital innovation bridges the gap between citizens and governance, ensuring transparency, accountability, and social justice for all.",
-    mission: "Building the future of digital services in Nigeria by leveraging technology to empower communities, protect human rights, and strengthen the fabric of democracy."
+    vision: "To be Africa's leading AI innovation hub, where cutting-edge technology meets local needs - creating a comprehensive digital ecosystem that empowers every Nigerian with the tools to learn, communicate, govern, and thrive.",
+    mission: "Building the future of digital services in Nigeria by developing a suite of AI-powered platforms that make advanced technology accessible, practical, and culturally relevant for everyone - from civic engagement to everyday productivity."
 };
 
-const platforms = [
+const categories = [
     {
-        name: "UNigeria",
-        description: "Empowering Citizens, Strengthening Democracy. A secure platform for reporting, fact-checking, and community collaboration.",
-        status: "Active",
-        url: "https://un.masanawa.com"
+        title: "Civic & News Platforms",
+        icon: "🏛️",
+        color: "purple",
+        platforms: [
+            { name: "UNigeria", description: "Democratic engagement & civic reporting", status: "Active", url: "https://un.masanawa.com" },
+            { name: "Labarai", description: "Hausa news & cultural content", status: "Active", url: "https://labarai.masanawa.com" },
+            { name: "News", description: "English news & analysis", status: "Coming Soon", url: "https://news.masanawa.com" },
+            { name: "People", description: "Encyclopedia of public officials", status: "Coming Soon", url: "https://people.masanawa.com" }
+        ]
     },
     {
-        name: "Labarai",
-        description: "Hausa news and knowledge platform bridging the information gap in Northern Nigeria with AI-powered content delivery.",
-        status: "Active",
-        url: "https://labarai.masanawa.com"
+        title: "Communication Tools",
+        icon: "💬",
+        color: "teal",
+        platforms: [
+            { name: "Contacts", description: "AI persona calling app", status: "In Development", url: "https://contacts.masanawa.com" },
+            { name: "Messenger", description: "Secure messaging platform", status: "Coming Soon", url: "https://messenger.masanawa.com" },
+            { name: "Translator", description: "Real-time multilingual translation", status: "Coming Soon", url: "https://translator.masanawa.com" },
+            { name: "Radio", description: "AI-powered streaming platform", status: "Coming Soon", url: "https://radio.masanawa.com" }
+        ]
     },
     {
-        name: "Contacts",
-        description: "AI-powered calling app for conversations with AI personas - from historical figures to expert advisors.",
-        status: "In Development",
-        url: "https://contacts.masanawa.com"
+        title: "Learning & Productivity",
+        icon: "📚",
+        color: "indigo",
+        platforms: [
+            { name: "Study", description: "Personalized AI tutor", status: "Coming Soon", url: "https://study.masanawa.com" },
+            { name: "Quiz", description: "Interactive learning quizzes", status: "Coming Soon", url: "https://quiz.masanawa.com" },
+            { name: "Debate", description: "AI-moderated debate platform", status: "Coming Soon", url: "https://debate.masanawa.com" },
+            { name: "Calculator", description: "AI-powered math solver", status: "Coming Soon", url: "https://calculator.masanawa.com" }
+        ]
+    },
+    {
+        title: "Professional Services",
+        icon: "💼",
+        color: "amber",
+        platforms: [
+            { name: "Legal", description: "Nigerian law assistant", status: "Coming Soon", url: "https://legal.masanawa.com" },
+            { name: "Business", description: "Business planning tool", status: "Coming Soon", url: "https://business.masanawa.com" },
+            { name: "Documents", description: "AI document assistant", status: "Coming Soon", url: "https://documents.masanawa.com" },
+            { name: "Code", description: "AI coding companion", status: "Coming Soon", url: "https://code.masanawa.com" }
+        ]
+    },
+    {
+        title: "Specialized AI Tools",
+        icon: "🤖",
+        color: "green",
+        platforms: [
+            { name: "Health", description: "AI health advisor", status: "Coming Soon", url: "https://health.masanawa.com" },
+            { name: "Farm", description: "Agricultural AI advisor", status: "Coming Soon", url: "https://farm.masanawa.com" },
+            { name: "Voice", description: "AI voice cloning", status: "Coming Soon", url: "https://voice.masanawa.com" }
+        ]
     }
 ];
 ---
 
 <Layout title="About Masanawa - Weavewell Industries">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <!-- Header -->
         <div class="text-center mb-16">
             <h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-purple via-brand-teal to-brand-gold mb-4 pb-2 tracking-tight">About {companyInfo.brandName}</h1>
             <p class="text-xl text-gray-600 font-medium">{companyInfo.legalName}</p>
+            <p class="text-sm text-gray-500 mt-2">Building Africa's AI Ecosystem</p>
         </div>
 
         <!-- Company Overview -->
@@ -55,13 +93,13 @@ const platforms = [
             </h2>
             <div class="space-y-6 text-gray-600 text-lg leading-relaxed relative z-10">
                 <p>
-                    <span class="font-bold text-brand-purple">Masanawa</span> (Weavewell Industries Limited) is a pioneering civic technology firm dedicated to using digital innovation for social good. Founded by Bello Abubakar Atiku, we build powerful platforms that empower citizens, protect human rights, and strengthen democratic participation across Nigeria and beyond.
+                    <span class="font-bold text-brand-purple">Masanawa</span> (Weavewell Industries Limited) is pioneering Africa's AI revolution. Founded by Bello Abubakar Atiku, we're building a comprehensive ecosystem of <span class="font-bold text-brand-teal">19+ AI-powered platforms</span> designed specifically for Nigerian and African communities.
                 </p>
                 <p>
-                    Our approach combines deep community understanding with cutting-edge software development. We've developed expertise in secure information systems, AI-powered reporting tools, and community engagement platforms through hands-on work in challenging environments including Katsina and Zamfara states.
+                    From <span class="font-bold">civic engagement</span> (UNigeria) to <span class="font-bold">cultural preservation</span> (Labarai), from <span class="font-bold">everyday productivity tools</span> (Calculator, Messenger) to <span class="font-bold">specialized AI services</span> (Health, Legal, Farm) - we're creating technology that speaks your language, understands your context, and solves your real problems.
                 </p>
                 <p>
-                    From building <span class="font-bold text-brand-teal">UNigeria</span> for civic engagement to creating culturally-relevant platforms like Labarai and Fasahar Zamani, we are committed to creating a safer, more transparent, and accountable society through technology that truly serves the people.
+                    Our work spans secure information systems in challenging environments like Katsina and Zamfara, AI-powered communication tools, educational platforms, and professional services - all unified by one mission: making advanced AI technology accessible and practical for every Nigerian.
                 </p>
             </div>
         </div>
@@ -88,42 +126,49 @@ const platforms = [
         <div class="bg-white p-10 rounded-3xl mb-12 border border-gray-100 shadow-xl shadow-brand-purple/5">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
                 <span class="w-2 h-8 bg-brand-gold rounded-full"></span>
-                Our Core Objectives
+                What We Do
             </h2>
-            <div class="space-y-4">
+            <div class="grid md:grid-cols-2 gap-4">
                 {companyInfo.objectives.map((objective, index) => (
                     <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100">
                         <div class="w-10 h-10 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center flex-shrink-0 font-bold border border-brand-gold/50 text-lg">
                             {index + 1}
                         </div>
-                        <p class="text-gray-700 pt-1.5 font-medium text-lg">{objective}</p>
+                        <p class="text-gray-700 pt-1.5 font-medium">{objective}</p>
                     </div>
                 ))}
             </div>
         </div>
 
-        <!-- Platforms -->
-        <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-xl shadow-brand-purple/5">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-                <span class="w-2 h-8 bg-brand-teal rounded-full"></span>
-                Our Platforms
-            </h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                {platforms.map((platform) => (
-                    <div class="group bg-white p-6 rounded-2xl border border-gray-200 hover:border-brand-purple hover:shadow-xl hover:shadow-brand-purple/10 transition-all duration-300 flex flex-col h-full">
-                        <div class="flex-1">
-                            <h4 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-purple transition-colors">{platform.name}</h4>
-                            <p class="text-gray-500 text-sm mb-4 leading-relaxed">{platform.description}</p>
+        <!-- Platform Ecosystem -->
+        <div class="mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4 text-center">Our AI Ecosystem</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">19 specialized platforms working together to transform how Nigerians access information, communicate, learn, and work</p>
+            
+            <div class="space-y-8">
+                {categories.map((category) => (
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <span class="text-3xl">{category.icon}</span>
+                            {category.title}
+                        </h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                            {category.platforms.map((platform) => (
+                                <div class="group p-4 rounded-xl border border-gray-200 hover:border-brand-purple hover:shadow-md transition-all duration-300">
+                                    <h4 class="font-bold text-gray-900 mb-2 group-hover:text-brand-purple transition-colors">{platform.name}</h4>
+                                    <p class="text-xs text-gray-500 mb-3 leading-relaxed">{platform.description}</p>
+                                    <span class={`inline-block px-2 py-1 rounded-full text-xs font-bold ${
+                                        platform.status === 'Active' 
+                                            ? 'bg-green-100 text-green-700' 
+                                            : platform.status === 'In Development'
+                                            ? 'bg-purple-100 text-purple-700'
+                                            : 'bg-gray-100 text-gray-600'
+                                    }`}>
+                                        {platform.status}
+                                    </span>
+                                </div>
+                            ))}
                         </div>
-                        <span class={`inline-block px-3 py-1 rounded-full text-xs font-bold self-start ${
-                            platform.status === 'Active' 
-                                ? 'bg-brand-green/10 text-brand-green' 
-                                : platform.status === 'Active Development'
-                                ? 'bg-brand-purple/10 text-brand-purple'
-                                : 'bg-brand-gold/10 text-brand-gold'
-                        }`}>
-                            {platform.status}
-                        </span>
                     </div>
                 ))}
             </div>
