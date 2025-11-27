@@ -3,14 +3,21 @@ import { labarai } from './labarai';
 import {
     contacts,
     translator,
-    studyAI,
-    voiceClone,
-    docuMind,
-    codeAssist,
-    healthAI,
-    bizPlan,
-    legalAI,
-    farmTech
+    study,
+    voice,
+    documents,
+    code,
+    health,
+    business,
+    legal,
+    farm,
+    people,
+    calculator,
+    news,
+    messenger,
+    debate,
+    quiz,
+    radio
 } from './ai-tools';
 
 export const localProjects = [
@@ -18,12 +25,19 @@ export const localProjects = [
     labarai,
     contacts,
     translator,
-    studyAI,
-    voiceClone,
-    docuMind,
-    codeAssist,
-    healthAI,
-    bizPlan,
-    legalAI,
-    farmTech
+    study,
+    voice,
+    documents,
+    code,
+    health,
+    business,
+    legal,
+    farm,
+    people,
+    calculator,
+    news,
+    messenger,
+    debate,
+    quiz,
+    radio
 ];
