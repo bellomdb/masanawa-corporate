@@ -1,7 +1,7 @@
 /* empty css                                 */
 import { e as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_CdnQXOD5.mjs';
 import 'piccolore';
-import { $ as $$Layout } from '../chunks/Layout_Dx_paOlX.mjs';
+import { $ as $$Layout } from '../chunks/Layout_w9WMcx6H.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Contact = createComponent(($$result, $$props, $$slots) => {
