@@ -13,9 +13,9 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Masanawa - Weavewell Industries Limited. Building the future of digital services in Nigeria through innovative media, e-learning, and virtual business solutions." />
+		<meta name="description" content="Masanawa - Weavewell Industries Limited. Building the future of digital services in Africa through innovative AI-powered platforms." />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="keywords" content="Masanawa, Weavewell Industries, Digital Solutions, Nigeria, E-learning, Media Services, Virtual Business" />
+		<meta name="keywords" content="Masanawa, Weavewell Industries, AI Platforms, Nigeria, Civic Tech, Digital Solutions" />
 		<meta name="author" content="Weavewell Industries Limited" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -23,22 +23,22 @@ const { title } = Astro.props;
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
-		<meta property="og:description" content="Building the future of digital services in Nigeria" />
+		<meta property="og:description" content="Building Africa's AI ecosystem" />
 		<meta property="og:site_name" content="Masanawa" />
 		
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content="Building the future of digital services in Nigeria" />
+		<meta name="twitter:description" content="Building Africa's AI ecosystem" />
 		
 		<title>{title}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
         <meta name="google-adsense-account" content="ca-pub-8370465467224716">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8370465467224716" crossorigin="anonymous"></script>
 	</head>
-	<body class="bg-gray-50 text-gray-900 font-['Inter'] min-h-screen flex flex-col selection:bg-brand-purple selection:text-white">
+	<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col selection:bg-brand-purple selection:text-white" style="font-family: Georgia, 'Merriweather', serif;">
         <Header />
 		<slot />
 		<Footer />
@@ -61,8 +61,16 @@ const { title } = Astro.props;
 		);
 	}
     
+    body {
+        font-family: Georgia, 'Merriweather', serif;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+    
     h1, h2, h3, h4, h5, h6 {
-        font-family: 'Outfit', sans-serif;
+        font-family: Georgia, 'Merriweather', serif;
+        font-weight: 700;
+        line-height: 1.2;
     }
 	
 	* {
