@@ -1,7 +1,7 @@
 /* empty css                                    */
 import { e as createComponent, k as renderComponent, l as renderScript, r as renderTemplate, m as maybeRenderHead } from '../../chunks/astro/server_CdnQXOD5.mjs';
 import 'piccolore';
-import { $ as $$Layout } from '../../chunks/Layout_CAF3AJbJ.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_w9WMcx6H.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Signup = createComponent(async ($$result, $$props, $$slots) => {
